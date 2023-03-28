@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1e15bdbff6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Where I Have Been</title>
 </head>
 <body>
     <a class="skip" href="#skip">Skip to Main Content</a>
     <header>
-        <p class="header_title">Travel Blog</p>
-        <nav>
-            <ul class="nav_links">
-                <li class="nav_item"><a href="index.html">Introduction</a></li>
-                <li class="nav_item"><a href="trips.html">Where I've Been</a></li>
-                <li class="nav_item"><a href="favorite.html">Favorite Trip</a></li>
-            </ul>
+        <div class="flex_header">
+            <p class="header_title header_item">Travel Blog</p>
+            <div class="hamburger header_item" onclick="showNav()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <nav id="navlist">
+            <div class="nav_flex">
+                <ul class="nav_links">
+                    <li class="nav_item"><a href="index.html">Introduction</a></li>
+                    <li class="nav_item"><a href="trips.html">Where I've Been</a></li>
+                    <li class="nav_item"><a href="favorite.html">Favorite Trip</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main class="introduction" id="skip">
@@ -54,5 +64,6 @@
     <footer>
         <p>&copy; Erika Hochstein, 2023 </p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

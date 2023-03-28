@@ -4,57 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1e15bdbff6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Introduction to my Life</title>
 </head>
 <body>
     <a class="skip" href="#skip">Skip to Main Content</a>
     <header>
-        <p class="header_title">Travel Blog</p>
-        <nav>
-            <ul class="nav_links">
-                <li class="nav_item"><a href="index.html">Introduction</a></li>
-                <li class="nav_item"><a href="trips.html">Where I've Been</a></li>
-                <li class="nav_item"><a href="favorite.html">Favorite Trip</a></li>
-            </ul>
+        <div class="flex_header">
+            <p class="header_title header_item">Travel Blog</p>
+            <div class="hamburger header_item" onclick="showNav()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <nav id="navlist">
+            <div class="nav_flex">
+                <ul class="nav_links">
+                    <li class="nav_item"><a href="index.html">Introduction</a></li>
+                    <li class="nav_item"><a href="trips.html">Where I've Been</a></li>
+                    <li class="nav_item"><a href="favorite.html">Favorite Trip</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
+    
     <main class="introduction" id="skip">
         <h1>Erika Hochstein's Travel Blog</h1>
 
         <h2 id="illinois">My Home in Illinois</h2>
         <p class="location">Lindenhurst, Illinois</p>
-        <!-- Image 01 -->
-        <img src="images/index/art_institute.jpg" alt="Nighthawks painting, oil on canvas, by Edward Hopper on display at The Art Institute of Chicago.">
 
-        <!-- Image 02 -->
-        <img src="images/index/boardwalk_day.jpg" alt="Wooden boardwalk in Millennium Trail in Lindenhurst, Illinois with midday sunlight and surrounding tall green grass.">
+        <div class="grid_container">
+            <!-- Image 01 -->
+            <img src="images/index/art_institute.jpg" alt="Nighthawks painting, oil on canvas, by Edward Hopper on display at The Art Institute of Chicago.">
 
-        <!-- Image 03 -->
-        <img src="images/index/boardwalk_sunset.jpg" alt="Wooden boardwalk in Millennium Trail in Lindenhurst, Illinois with an orange and yellow sunset sky.">
+            <!-- Image 02 -->
+            <img src="images/index/boardwalk_day.jpg" alt="Wooden boardwalk in Millennium Trail in Lindenhurst, Illinois with midday sunlight and surrounding tall green grass.">
 
-        <!-- Image 04 -->
-        <img src="images/index/chicago_river.jpg" alt="Chicago skyscrapers lining the Chicago River.">
+            <!-- Image 03 -->
+            <img src="images/index/boardwalk_sunset.jpg" alt="Wooden boardwalk in Millennium Trail in Lindenhurst, Illinois with an orange and yellow sunset sky.">
 
-        <!-- Image 05 -->
-        <img src="images/index/neighborhood_trail.jpg" alt="Winding Millennium Trail in Lindenhurst, Illinois with tall trees lining the gravel trail and green grass.">
+            <!-- Image 04 -->
+            <img src="images/index/chicago_river.jpg" alt="Chicago skyscrapers lining the Chicago River.">
 
-        <!-- Image 06 -->
-        <img src="images/index/summer_drive.jpg" alt="Two lane highway centered with surrounding farming fields. One tall tree stands by itself on the right side of the road.">
+            <!-- Image 05 -->
+            <img src="images/index/neighborhood_trail.jpg" alt="Winding Millennium Trail in Lindenhurst, Illinois with tall trees lining the gravel trail and green grass.">
 
-        <!-- Image 07 -->
-        <img src="images/index/third_lake.jpg" alt="Sunset view from a boat on Third Lake in Third Lake, Illinois.">
+            <!-- Image 06 -->
+            <img src="images/index/summer_drive.jpg" alt="Two lane highway centered with surrounding farming fields. One tall tree stands by itself on the right side of the road.">
 
-        <!-- Image 08 -->
-        <img src="images/index/wrigley_field.jpg" alt="Wrigley Field after the Cubs win. A Cubs mascot runs across the field holding a white flag with a navy blue W. City buildings seen in the distance behind bleachers full of fans.">
+            <!-- Image 07 -->
+            <img src="images/index/third_lake.jpg" alt="Sunset view from a boat on Third Lake in Third Lake, Illinois.">
+
+            <!-- Image 08 -->
+            <img src="images/index/wrigley_field.jpg" alt="Wrigley Field after the Cubs win. A Cubs mascot runs across the field holding a white flag with a navy blue W. City buildings seen in the distance behind bleachers full of fans.">
         
-        <!-- Image 09 -->
-        <img src="images/index/wrigley_sign.jpg" alt="Wrigley Field entrance sign in Chicago, Illinois displaying 'Dead & Company' for a Summer concert.">
-        
+            <!-- Image 09 -->
+            <img src="images/index/wrigley_sign.jpg" alt="Wrigley Field entrance sign in Chicago, Illinois displaying 'Dead & Company' for a Summer concert.">
+        </div>
+
     </main>
 
     <footer>
         <p>&copy; Erika Hochstein, 2023 </p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
