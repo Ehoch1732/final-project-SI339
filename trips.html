@@ -14,20 +14,21 @@
     <a class="skip" href="#skip">Skip to Main Content</a>
     <header>
         <div class="flex_header">
-            <p class="header_title header_item">Travel Blog</p>
-            <div class="hamburger header_item" onclick="showNav()">
-                <i class="fa-solid fa-bars"></i>
+            <div class="top_header">
+                <p class="header_title header_item">Travel Blog</p>
+                <div class="hamburger header_item" onclick="showNav()" onkeypress="showNav()" tabindex="0">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
-        </div>
-        <nav id="navlist">
-            <div class="nav_flex">
+            <nav id="navlist">
+                <!-- How do I get the focus state to trigger? How can I follow the link with my keyboard? -->
                 <ul class="nav_links">
-                    <li class="nav_item"><a href="index.html">Introduction</a></li>
-                    <li class="nav_item"><a href="trips.html">Where I've Been</a></li>
-                    <li class="nav_item"><a href="favorite.html">Favorite Trip</a></li>
+                    <li class="nav_item" tabindex="1"><a href="index.html">Introduction</a></li>
+                    <li class="nav_item" tabindex="2"><a href="trips.html">Where I've Been</a></li>
+                    <li class="nav_item" tabindex="3"><a href="favorite.html">Favorite Trip</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
     <main class="introduction" id="skip">
         <h1>Where I Have Been</h1>

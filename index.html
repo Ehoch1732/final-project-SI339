@@ -14,20 +14,21 @@
     <a class="skip" href="#skip">Skip to Main Content</a>
     <header>
         <div class="flex_header">
-            <p class="header_title header_item">Travel Blog</p>
-            <div class="hamburger header_item" onclick="showNav()">
-                <i class="fa-solid fa-bars"></i>
+            <div class="top_header">
+                <p class="header_title header_item">Travel Blog</p>
+                <div class="hamburger header_item" onclick="showNav()" onkeypress="showNav()" tabindex="0">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
-        </div>
-        <nav id="navlist">
-            <div class="nav_flex">
+            <nav id="navlist">
+                <!-- How do I get the focus state to trigger? How can I follow the link with my keyboard? -->
                 <ul class="nav_links">
-                    <li class="nav_item"><a href="index.html">Introduction</a></li>
-                    <li class="nav_item"><a href="trips.html">Where I've Been</a></li>
-                    <li class="nav_item"><a href="favorite.html">Favorite Trip</a></li>
+                    <li class="nav_item" tabindex="1"><a href="index.html">Introduction</a></li>
+                    <li class="nav_item" tabindex="2"><a href="trips.html">Where I've Been</a></li>
+                    <li class="nav_item" tabindex="3"><a href="favorite.html">Favorite Trip</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
     
     <main class="introduction" id="skip">
@@ -36,33 +37,60 @@
         <h2 id="illinois">My Home in Illinois</h2>
         <p class="location">Lindenhurst, Illinois</p>
 
-        <div class="grid_container">
-            <!-- Image 01 -->
-            <img src="images/index/art_institute.jpg" alt="Nighthawks painting, oil on canvas, by Edward Hopper on display at The Art Institute of Chicago.">
+        <div class="grid_container_home">
+            <div class="grid_item_home grid_one">
+                <!-- Image 01 -->
+                <img src="images/index/art_institute.jpg" class="grid_img_home" alt="Nighthawks painting, oil on canvas, by Edward Hopper on display at The Art Institute of Chicago.">
+                <p class="grid_text_home hometext_one">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
 
-            <!-- Image 02 -->
-            <img src="images/index/boardwalk_day.jpg" alt="Wooden boardwalk in Millennium Trail in Lindenhurst, Illinois with midday sunlight and surrounding tall green grass.">
+            <div class="grid_item_home grid_two">
+                <!-- Image 02 -->
+                <img src="images/index/boardwalk_day.jpg" class="grid_img_home" alt="Wooden boardwalk in Millennium Trail in Lindenhurst, Illinois with midday sunlight and surrounding tall green grass.">
+                <p class="grid_text_home hometext_two">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
 
-            <!-- Image 03 -->
-            <img src="images/index/boardwalk_sunset.jpg" alt="Wooden boardwalk in Millennium Trail in Lindenhurst, Illinois with an orange and yellow sunset sky.">
+            <div class="grid_item_home grid_three">
+                <!-- Image 03 -->
+                <img src="images/index/boardwalk_sunset.jpg" class="grid_img_home" alt="Wooden boardwalk in Millennium Trail in Lindenhurst, Illinois with an orange and yellow sunset sky.">
+                <p class="grid_text_home hometext_three">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
 
-            <!-- Image 04 -->
-            <img src="images/index/chicago_river.jpg" alt="Chicago skyscrapers lining the Chicago River.">
+            <div class="grid_item_home grid_four">
+                <!-- Image 04 -->
+                <img src="images/index/chicago_river.jpg" class="grid_img_home" alt="Chicago skyscrapers lining the Chicago River.">
+                <p class="grid_text_home hometext_four">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            
+            <div class="grid_item_home grid_five">
+                <!-- Image 05 -->
+                <img src="images/index/neighborhood_trail.jpg" alt="Winding Millennium Trail in Lindenhurst, Illinois with tall trees lining the gravel trail and green grass.">
+                <p class="grid_text_home hometext_five">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
 
-            <!-- Image 05 -->
-            <img src="images/index/neighborhood_trail.jpg" alt="Winding Millennium Trail in Lindenhurst, Illinois with tall trees lining the gravel trail and green grass.">
+            <div class="grid_item_home grid_six">
+                <!-- Image 06 -->
+                <img src="images/index/summer_drive.jpg" class="grid_img_home" alt="Two lane highway centered with surrounding farming fields. One tall tree stands by itself on the right side of the road.">
+                <p class="grid_text_home hometext_six">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
 
-            <!-- Image 06 -->
-            <img src="images/index/summer_drive.jpg" alt="Two lane highway centered with surrounding farming fields. One tall tree stands by itself on the right side of the road.">
+            <div class="grid_item_home grid_seven">
+                <!-- Image 07 -->
+                <img src="images/index/third_lake.jpg" class="grid_img_home" alt="Sunset view from a boat on Third Lake in Third Lake, Illinois.">
+                <p class="grid_text_home hometext_seven">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
 
-            <!-- Image 07 -->
-            <img src="images/index/third_lake.jpg" alt="Sunset view from a boat on Third Lake in Third Lake, Illinois.">
-
-            <!-- Image 08 -->
-            <img src="images/index/wrigley_field.jpg" alt="Wrigley Field after the Cubs win. A Cubs mascot runs across the field holding a white flag with a navy blue W. City buildings seen in the distance behind bleachers full of fans.">
+            <div class="grid_item_home grid_eight">
+                <!-- Image 08 -->
+                <img src="images/index/wrigley_field.jpg" class="grid_img_home" alt="Wrigley Field after the Cubs win. A Cubs mascot runs across the field holding a white flag with a navy blue W. City buildings seen in the distance behind bleachers full of fans.">
+                <p class="grid_text_home hometext_eight">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
         
-            <!-- Image 09 -->
-            <img src="images/index/wrigley_sign.jpg" alt="Wrigley Field entrance sign in Chicago, Illinois displaying 'Dead & Company' for a Summer concert.">
+            <div class="grid_item_home grid_nine">
+                <!-- Image 09 -->
+                <img src="images/index/wrigley_sign.jpg" class="grid_img_home" alt="Wrigley Field entrance sign in Chicago, Illinois displaying 'Dead & Company' for a Summer concert.">
+                <p class="grid_text_home hometext_nine">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
         </div>
 
     </main>
