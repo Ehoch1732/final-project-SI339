@@ -97,6 +97,13 @@ ul.nav_links {
 li.nav_item a {
     text-decoration: none;
     color: white;
+    opacity: 60%;
+}
+
+/* Current page user is on has bold and fully opaque nav link */
+li.nav_item.current_page a {
+    font-weight: bold;
+    opacity: 100%;
 }
 
 li.nav_item {
@@ -104,8 +111,7 @@ li.nav_item {
 }
 
 li.nav_item:hover {
-    background-color: #C2B9B0;
-    border-radius: 10px;
+    text-decoration: underline;
 }
 
 /* Intro information */
@@ -131,7 +137,7 @@ li.nav_item:hover {
     padding-top: 5px;
 }
 
-/* Styling of photos */
+/* Styling of photos on homepage (index)*/
 .grid_container_home {
     display: grid;
     grid-template-columns: 1fr;
@@ -177,6 +183,79 @@ li.nav_item:hover {
 /* Separate each "polaroid" */
 .grid_container_home div {
     margin-bottom: 20px;
+}
+
+/* Favorite Trip Page */
+.fav_intro_block {
+    background-image: url("../images/favorite/mountain_view.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    /* Darken background image so that text is readable */
+    background-color: rgb(176, 176, 176);
+    background-blend-mode: multiply;
+    /* Large top/bottom padding so that background image shown */
+    padding: 80px 20px;
+    /* Add shadow so that text easier to read on background */
+    text-shadow: 1px 1px 2px black;
+}
+
+.fav_intro_block h1 {
+    color: white;
+}
+
+.fav_intro_block h2 {
+    font-weight: bold;
+}
+
+main.favorite {
+    background-color: #697d49;
+}
+
+/* Three images: column in mobile view 
+   In larger screens, these images will be a row */
+.fav_three_images {
+    display: flex;
+    flex-direction: column;
+}
+
+.fav_three {
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.fav_three:first-child {
+    padding: 40px 40px 20px 40px;
+}
+
+.fav_three:last-child {
+    padding: 20px 40px 40px 40px;
+}
+
+.fav_description {
+    font-size: 150%;
+    text-align: center;
+    padding: 0 20px 40px 20px;
+}
+
+.bluff_pic {
+    background: white;
+    color: #697d49;
+}
+
+.bluff_pic, .puppy_pic {
+    font-weight: bold;
+    font-size: 200%;
+    text-align: center;
+}
+
+.bluff_pic, .puppy_pic {
+    padding: 40px;
+}
+
+.bluff_pic p, .puppy_pic p {
+    margin-bottom: 40px;
+    padding: 50px 0;
 }
 
 /* Navigation tablet view 640*/

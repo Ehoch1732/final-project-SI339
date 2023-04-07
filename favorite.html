@@ -23,36 +23,46 @@
             <nav id="navlist">
                 <!-- How do I get the focus state to trigger? How can I follow the link with my keyboard? -->
                 <ul class="nav_links">
-                    <li class="nav_item" tabindex="1"><a href="index.html">Introduction</a></li>
-                    <li class="nav_item" tabindex="2"><a href="trips.html">Where I've Been</a></li>
-                    <li class="nav_item" tabindex="3"><a href="favorite.html">Favorite Trip</a></li>
+                    <li class="nav_item" id="index" tabindex="0"><a href="index.html">Introduction</a></li>
+                    <li class="nav_item" id="trips" tabindex="0"><a href="trips.html">Where I've Been</a></li>
+                    <li class="nav_item" id="favorite" tabindex="0"><a href="favorite.html">Favorite Trip</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main class="introduction" id="skip">
-        <h1>My Favorite Trip</h1>
+    <main class="introduction favorite" id="skip">
+        <div class="fav_intro_block">
+            <h1>My Favorite Trip</h1>
+            <h2 id="smoky">Great Smoky Mountains National Park</h2>
+            <p class="location fav_location">Gatlinburg, Tennessee</p>
+        </div>
 
-        <h2 id="smoky">Great Smoky Mountains National Park</h2>
-        <p class="location fav_location">Gatlinburg, Tennessee</p>
+        <div class="fav_three_images">
+            <!-- Image 01 -->
+            <img class="fav_three" src="images/favorite/rock_tower.JPG" alt="A stajck of thin, flat rocks next to the Alum Cave Creek in the Great Smoky Montains.">
+        
+            <!-- Image 02 -->
+            <img class="fav_three" src="images/favorite/porch_swing.JPG" alt="A dark wooden porch swing next to a wodden chair with stars cut out of its back. Many bare trees stand tall in the background.">
 
-        <!-- Image 01 -->
-        <img src="images/favorite/cave.JPG" alt="Alum Cave Bluff in the Great Smoky Mountains. The Bluff looms a group of people standing beneath it.">
+            <!-- Image 03 -->
+            <img class="fav_three" src="images/favorite/tennessee_river.JPG" alt="Water rushing under a bridge on 11-mile one-way scenic loop called Cades Coves Road in Tennessee.">
+        </div>
 
-        <!-- Image 02 -->
-        <img src="images/favorite/dog_backpack.PNG" alt="A small golden puppy in a backpack on a hiker in the Great Smoky Mountains. The puppy is looking back at the camera with floppy ears.">
+        <div class="fav_description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
 
-        <!-- Image 03 -->
-        <img src="images/favorite/mountain_view.JPG" alt="View of the Great Smoky Mountains on a sunny day from the Alum Cave Trail.">
+        <div class="fav_single bluff_pic">
+            <p>Alum Cave Bluff</p>
+            <!-- Image 04 -->
+            <img src="images/favorite/cave.JPG" alt="Alum Cave Bluff in the Great Smoky Mountains. The Bluff looms a group of people standing beneath it.">
+        </div>
 
-        <!-- Image 04 -->
-        <img src="images/favorite/porch_swing.JPG" alt="A dark wooden porch swing next to a wodden chair with stars cut out of its back. Many bare trees stand tall in the background.">
-
+        <div class="fav_single puppy_pic">
+            <p>What's better than hiking and puppies?</p>
+            <img src="images/favorite/dog_backpack.PNG" alt="A small golden puppy in a backpack on a hiker in the Great Smoky Mountains. The puppy is looking back at the camera with floppy ears.">
+        </div>
         <!-- Image 05 -->
-        <img src="images/favorite/rock_tower.JPG" alt="A stajck of thin, flat rocks next to the Alum Cave Creek in the Great Smoky Montains.">
-
-        <!-- Image 06 -->
-        <img src="images/favorite/tennessee_river.JPG" alt="Water rushing under a bridge on 11-mile one-way scenic loop called Cades Coves Road in Tennessee.">
         
     </main>
 
