@@ -11,8 +11,8 @@
     <title>Introduction to my Life</title>
 </head>
 <body>
-    <a class="skip" href="#skip">Skip to Main Content</a>
     <header>
+        <a class="skip" href="#skip">Skip to Main Content</a>
         <div class="flex_header">
             <div class="top_header">
                 <p class="header_title header_item">Travel Blog</p>
@@ -23,20 +23,22 @@
             <nav id="navlist">
                 <!-- How do I get the focus state to trigger? How can I follow the link with my keyboard? -->
                 <ul class="nav_links">
-                    <li class="nav_item" tabindex="1"><a href="index.html">Introduction</a></li>
-                    <li class="nav_item" tabindex="2"><a href="trips.html">Where I've Been</a></li>
-                    <li class="nav_item" tabindex="3"><a href="favorite.html">Favorite Trip</a></li>
+                    <li class="nav_item"><a href="index.html">Introduction</a></li>
+                    <li class="nav_item"><a href="trips.html">Where I've Been</a></li>
+                    <li class="nav_item"><a href="favorite.html">Favorite Trip</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     
     <main class="introduction" id="skip">
-        <h1>A Snippet of My Life</h1>
-
-        <h2 id="illinois">My Home in Illinois</h2>
-        <p class="location">Lindenhurst, Illinois</p>
-        <p class="home_intro">I grew up in a small town in Illinois an hour north of Chicago. My days growing up often consisted of </p>
+        <div class="intro_block">
+            <h1>My Home in Illinois</h1>
+            <div class="intro_blurb">
+                <h2 class="location">Lindenhurst, Illinois</h2>
+                <p class="home_intro">An hour north of Chicago and 15 minutes south of the Wisconsin border lies Lindenhurst, Illinois. This is where I grew up in my family of six. I often spent my time outside whenever the weather would permit or my family and I would head to downtown Chicago to visit my older brother. While Lindenhurst may be a small town, below lies a collection of photos representative of my time living in Illinois.</p>
+            </div>
+        </div>
 
         <div class="grid_container_home">
                 <!-- Image 01 -->
@@ -44,7 +46,7 @@
                 <div class="item_home_one text_grid">
                     <h3 class="place">The Art Institute of Chicago</h3>
                     <h4 class="city">Chicago, Illinois</h4>
-                    <p class="text_home_one">This is an oil on canvas painting by Edward Hopper titled Nighthawks. I had the joy of seeing this painting in person at The Art Institute of Chicago this past Summer of 2022. Despite living so close to Chicago, this was my first visit! It was a particularly hot Summer day, but incredible collection of artwork at the institute made up for it.</p>
+                    <p class="text_home_one">This is a painting by Edward Hopper titled Nighthawks. I had the joy of seeing this painting in person at The Art Institute of Chicago this past Summer of 2022. Despite living so close to Chicago, this was my first visit to the Art Institute! It was a particularly hot Summer day, but the incredible collection of artwork I sw this day made up for it. I feel fortunate to have grown up so close to a major city filled with memorable landmarks. </p>
                 </div>
             
                 <!-- Image 02 -->
@@ -52,7 +54,7 @@
                 <div class="item_home_two text_grid">
                     <h3 class="place">Millennium Trail</h3>
                     <h4 class="city">Lindenhurst, Illinois</h4>
-                    <p class="text_home_two">This trail lies in the back of my neighborhood. I have spent hours walking my dogs here, biking with my mom, catching up with friends, and going for runs whenever nice weather came around.</p>
+                    <p class="text_home_two">This trail lies in the back of my neighborhood. I have spent hours walking my dogs here, biking with my mom, catching up with friends, and going for runs whenever nice weather came around. We didn't have this trail until I was in middle school, and I am lucky that it came when it did!</p>
                 </div>
             
                 <!-- Image 03 -->
@@ -60,7 +62,7 @@
                 <div class="item_home_three text_grid">
                     <h3 class="place">Millennium Trail</h3>
                     <h4 class="city">Lindenhurst, Illinois</h4>
-                    <p class="text_home_three">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="text_home_three">Here is another picture of the Millennium trail at the same boardwalk, but this time captured at sunset. Sunset walks have always been a way for me to relax at the end of day with some good music or an interesting podcast.</p>
                 </div>
             
                 <!-- Image 04 -->
@@ -68,7 +70,7 @@
                 <div class="item_home_four text_grid">
                     <h3 class="place">The Loop</h3>
                     <h4 class="city">Chicago, Illinois</h4>
-                    <p class="text_home_four">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="text_home_four">This is a picture of the Chicago Loop taken from a boat on the Chicago River. My family and I rented a boat to take out on the river and spent a lovely day cruising through the river.</p>
                 </div>
         
                 <!-- Image 05 -->
@@ -76,7 +78,7 @@
                 <div class="item_home_five text_grid">
                     <h3 class="place">Millennium Trail</h3>
                     <h4 class="city">Linenhurst, Illinois</h4>
-                    <p class="text_home_five">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="text_home_five">Again, the Millennium Trail! This picture is taken at the entrance of the trail. Lindenhurst is a small town.</p>
                 </div>
 
                 <!-- Image 06 -->
@@ -84,7 +86,7 @@
                 <div class="item_home_six text_grid">
                     <h3 class="place">N Hunt Club Rd</h3>
                     <h4 class="city">Old Mill Creek, Illinois</h4>
-                    <p class="text_home_six">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="text_home_six">I drove down this road every day during one Summer to get to work. At the beginning of this road is a horse stable with white fences and vast fields. I loved seeing the horses grazing every morning with the sun shining bright in the early mornings on my drives to work.</p>
                 </div>
 
                 <!-- Image 07 -->
@@ -92,7 +94,7 @@
                 <div class="item_home_seven text_grid">
                     <h3 class="place">Third Lake</h3>
                     <h4 class="city">Third Lake, Illinois</h4>
-                    <p class="text_home_seven">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="text_home_seven">This sunset is pictured over Third Lake. Over the Summer, we would take my friends boat out onto this lake and the sunsets never failed to amaze me.</p>
                 </div>
          
                 <!-- Image 08 -->
@@ -100,7 +102,7 @@
                 <div class="item_home_eight text_grid">
                     <h3 class="place">Wrigley Field</h3>
                     <h4 class="city">Chicago, Illinois</h4>
-                    <p class="text_home_eight">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="text_home_eight">I took this photo after a Cubs win! Don't ask me who was playing, though.</p>
                 </div>
           
         
@@ -109,7 +111,7 @@
                 <div class="item_home_nine text_grid">
                     <h3 class="place">Wrigley Field Entrance</h3>
                     <h4 class="city">Chicago, Illinois</h4>
-                    <p class="text_home_nine">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="text_home_nine">Wrigley Field is also a great concert venue. I saw Dead & Company for the first time in Summer 2022 with my Dad. It was an awesome concert and Wrigleyville was packed!</p>
                 </div>
 
         </div>
