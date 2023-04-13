@@ -3,7 +3,7 @@ img {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     background-color: #C2CAD0;
     color: white;
@@ -51,6 +51,7 @@ h4 {
 header {
     background-color: darkslategrey;
     color: white;
+    position: sticky;
 }
 
 .flex_header {
@@ -194,8 +195,10 @@ li.nav_item:hover {
     /* Darken background image so that text is readable */
     background-color: rgb(176, 176, 176);
     background-blend-mode: multiply;
+    /* Background image scrolls with page */
+    /* background-attachment: fixed; */
     /* Large top/bottom padding so that background image shown */
-    padding: 80px 20px;
+    padding: 150px 30px;
     /* Add shadow so that text easier to read on background */
     text-shadow: 1px 1px 2px black;
 }
@@ -222,6 +225,11 @@ main.favorite {
 .fav_three {
     padding: 20px 40px;
     box-sizing: border-box;
+}
+
+/* Add drop shadow to all images on this page */
+img.fav_three, .bluff_pic img, .puppy_pic img {
+    filter: drop-shadow(5px 5px 8px black);
 }
 
 .fav_three:first-child {
@@ -256,6 +264,105 @@ main.favorite {
 .bluff_pic p, .puppy_pic p {
     margin-bottom: 40px;
     padding: 50px 0;
+}
+
+/* Where I've Been Page Styling */
+.welcome {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+/* Create two even columns for welcome flex box */
+/* Welcome child 1 */
+.welcome_image {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+/* Welcome child 2 */
+.welcome_text {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.welcome_text h1 {
+    /* Change default size */
+    font-size: 100%;
+    font-weight: normal;
+    text-align: left;
+    /* Remove default margin */
+    margin: 0;
+}
+
+.welcome_text p {
+    font-size: 125%;
+    font-weight: bolder;
+    color: darkslategrey;
+}
+
+.welcome_text {
+    align-self: center;
+    padding: 0 20px;
+}
+
+.welcome_image img {
+    height: 100%;
+}
+
+/* Alternate background colors for each trip */
+div.trip:nth-child(even) {
+    background-color: darkslategrey;
+}
+
+div.trip:nth-child(odd) {
+    background-color: white;
+    /* Darken text color on the white backgrounds */
+    color: darkslategrey;
+}
+
+div.trip:nth-child(odd) h2 {
+    color: darkslategrey;
+}
+
+div.trip h2 {
+    font-weight: bolder;
+}
+
+/* Photos and corresponding text are each their own flex component */
+.trip_card {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px 50px 50px;
+}
+
+.trip_photo img {
+    /* Shadow on each image */
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+.photo_introduction {
+    /* Separate photo header from description */
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.photo_info {
+    /* Inset text from corresponding photo */
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+
+/* Remove previous h2 margins */
+div.trip h2 {
+    margin: 0;
+    font-size: 120%;
+}
+
+.trip_details {
+    text-align: center;
+    padding: 100px 0;
 }
 
 /* Navigation tablet view 640*/
@@ -330,6 +437,51 @@ main.favorite {
 
     div.item_home_eight {
         grid-row-start: 8;
+    }
+
+    /* Favorite Trip styling */
+    .fav_intro_block {
+        /* Even larger top/bottom padding so that background image shown */
+        padding: 200px 75px;
+    }
+    
+    /* Bring top three images into a row */
+    .fav_three_images {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    
+    .fav_three_images img.fav_three {
+        padding: 20px;
+    }
+
+    .bluff_pic p, .puppy_pic p {
+        /* Enlarge headings on separate section */
+        font-size: 150%;;
+    }
+
+    /* Where I've Beeen Styling */
+    /* Enlarge the introduction welcome text */
+    .welcome_text p {
+        font-size: 200%;
+    }
+
+    .welcome_text h1 {
+        font-size: 125%;
+    }
+
+    .welcome_text {
+        padding: 0 50px;
+    }
+
+    /* Enlarge trip information text */
+    .trip h2 {
+        font-size: 175%;
+    }
+
+    .trip_year {
+        font-size: 150%;
     }
 } /* Tablet media query */
 
@@ -421,6 +573,31 @@ main.favorite {
     div.item_home_eight {
         grid-column: 2 / span 1;
         grid-row-start: 6;
+    }
+
+    /* Favorite Trip styling */
+    .fav_intro_block {
+        /* Even larger top/bottom padding so that background image shown */
+        padding: 200px 100px;
+    }
+
+    /* Enlarge text over the photo */
+    .fav_intro_block h1 {
+        font-size: 300%;
+    }
+
+    .fav_intro_block h2 {
+        font-size: 200%;
+    }
+
+    /* Where I've Beeen Styling */
+    /* Enlarge the introduction welcome text */
+    .welcome_text p {
+        font-size: 250%;
+    }
+
+    .welcome_text h1 {
+        font-size: 150%;
     }
 
 } /* Desktop & larger screens media query */
