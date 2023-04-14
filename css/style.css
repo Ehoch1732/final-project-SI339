@@ -52,6 +52,8 @@ header {
     background-color: darkslategrey;
     color: white;
     position: sticky;
+    top: 0;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .flex_header {
@@ -228,8 +230,13 @@ main.favorite {
 }
 
 /* Add drop shadow to all images on this page */
-img.fav_three, .bluff_pic img, .puppy_pic img {
-    filter: drop-shadow(5px 5px 8px black);
+.fav_three img, .bluff_pic img, .puppy_pic img {
+    /* filter: drop-shadow(5px 5px 8px black); */
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.fav_three img {
+    border: 5px solid white;
 }
 
 .fav_three:first-child {
@@ -247,6 +254,7 @@ img.fav_three, .bluff_pic img, .puppy_pic img {
 }
 
 .bluff_pic {
+    /* Invert color scheme */
     background: white;
     color: #697d49;
 }
@@ -255,13 +263,12 @@ img.fav_three, .bluff_pic img, .puppy_pic img {
     font-weight: bold;
     font-size: 200%;
     text-align: center;
-}
-
-.bluff_pic, .puppy_pic {
     padding: 40px;
 }
 
 .bluff_pic p, .puppy_pic p {
+    font-size: 150%;
+    font-weight: bold;
     margin-bottom: 40px;
     padding: 50px 0;
 }
@@ -273,22 +280,17 @@ img.fav_three, .bluff_pic img, .puppy_pic img {
     background-color: white;
 }
 
-/* Create two even columns for welcome flex box */
+/* Welcome flex box */
 /* Welcome child 1 */
 .welcome_image {
-    width: 50%;
-    box-sizing: border-box;
-}
-
-/* Welcome child 2 */
-.welcome_text {
-    width: 50%;
+    /* No image in header on mobile displays */
+    display: none;
     box-sizing: border-box;
 }
 
 .welcome_text h1 {
     /* Change default size */
-    font-size: 100%;
+    font-size: 125%;
     font-weight: normal;
     text-align: left;
     /* Remove default margin */
@@ -296,14 +298,18 @@ img.fav_three, .bluff_pic img, .puppy_pic img {
 }
 
 .welcome_text p {
-    font-size: 125%;
+    font-size: 150%;
     font-weight: bolder;
     color: darkslategrey;
+    text-align: left;
 }
 
+/* Welcome child 2 */
 .welcome_text {
+    box-sizing: border-box;
+    max-width: 75%;
     align-self: center;
-    padding: 0 20px;
+    padding: 100px 50px;
 }
 
 .welcome_image img {
@@ -322,18 +328,27 @@ div.trip:nth-child(odd) {
 }
 
 div.trip:nth-child(odd) h2 {
+    /* Darken haeders on the white backgrounds */
     color: darkslategrey;
 }
 
 div.trip h2 {
-    font-weight: bolder;
+    /* Remove previous h2 margins */
+    margin: 0;
+    /* Change default h2 size */
+    font-size: 140%;
+    font-weight: bold;
+}
+
+p.trip_year {
+    font-size: 125%;
 }
 
 /* Photos and corresponding text are each their own flex component */
 .trip_card {
     display: flex;
     flex-direction: column;
-    padding: 0 50px 50px 50px;
+    padding: 0 65px 50px 65px;
 }
 
 .trip_photo img {
@@ -353,16 +368,9 @@ div.trip h2 {
     padding-top: 5px;
 }
 
-
-/* Remove previous h2 margins */
-div.trip h2 {
-    margin: 0;
-    font-size: 120%;
-}
-
 .trip_details {
     text-align: center;
-    padding: 100px 0;
+    padding: 80px 0;
 }
 
 /* Navigation tablet view 640*/
@@ -450,38 +458,112 @@ div.trip h2 {
         width: 100%;
         flex-direction: row;
         flex-wrap: nowrap;
+        padding: 50px 0;
     }
     
-    .fav_three_images img.fav_three {
+    /* Creates 40px of padding between and on sides each image */
+    .fav_three, .fav_three:first-child,
+    .fav_three:last-child {
+        /* Reset padding */
         padding: 20px;
     }
 
+    .fav_three:first-child {
+        padding-left: 40px;
+    }
+
+    .fav_three:last-child {
+        padding-right: 40px;
+    }
+
+    .fav_description {
+        padding: 0 0 70px 0;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    /* Bottom two separate section styling */
     .bluff_pic p, .puppy_pic p {
-        /* Enlarge headings on separate section */
-        font-size: 150%;;
+        width: 75%;
+        margin: 0 auto;
+        /* Separate text and photo */
+        padding: 0 20px;
+    }
+
+    /* Put photo and title side-by-side */
+    .fav_single {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Image in slightly smaller column so that they don't line up in the middle */
+    .fav_single img {
+        width: 45%;
+    }
+
+    .fav_single p {
+        width: 55%;
+    }
+
+    /* Reverse direction of the second section */
+    .puppy_pic {
+        flex-direction: row-reverse;
     }
 
     /* Where I've Beeen Styling */
+    /* Create two even columns for welcome flex box */
+    .welcome_image {
+        display: block;
+        width: 50%;
+    }
+
+    .welcome_text {
+        width: 50%;
+        padding: 50px 50px;
+    }
+
     /* Enlarge the introduction welcome text */
     .welcome_text p {
         font-size: 200%;
     }
 
     .welcome_text h1 {
-        font-size: 125%;
-    }
-
-    .welcome_text {
-        padding: 0 50px;
+        font-size: 160%;
     }
 
     /* Enlarge trip information text */
-    .trip h2 {
-        font-size: 175%;
+    div.trip h2 {
+        font-size: 160%;
     }
 
-    .trip_year {
+    p.trip_year {
+        font-size: 130%;
+    }
+
+    /* Picture and corresponding text side by side */
+    .trip_card {
+        flex-direction: row;
+    }
+
+    /* Trip Card Child 1 */
+    .trip_photo {
+        max-width: 50%;
+    }
+
+    /* Trip Card Child 2 */
+    .photo_info {
+        width: 50%;
+        padding: 10px 0 0 20px;
+    }
+
+    /* Enlarge text next to photos */
+    .photo_introduction {
         font-size: 150%;
+    }
+
+    .photo_details {
+        font-size: 125%;
     }
 } /* Tablet media query */
 
@@ -578,7 +660,7 @@ div.trip h2 {
     /* Favorite Trip styling */
     .fav_intro_block {
         /* Even larger top/bottom padding so that background image shown */
-        padding: 200px 100px;
+        padding: 300px 100px;
     }
 
     /* Enlarge text over the photo */
@@ -590,6 +672,22 @@ div.trip h2 {
         font-size: 200%;
     }
 
+    .bluff_pic, .puppy_pic {
+        padding: 100px;
+    }
+
+    .puppy_pic p {
+        font-size: 200%;
+        text-align: left;
+        padding-left: 50px;
+    }
+
+    .bluff_pic p {
+        font-size: 200%;
+        text-align: right;
+        padding-right: 50px;
+    }
+
     /* Where I've Beeen Styling */
     /* Enlarge the introduction welcome text */
     .welcome_text p {
@@ -597,8 +695,31 @@ div.trip h2 {
     }
 
     .welcome_text h1 {
+        font-size: 175%;
+    }
+
+    /* Enlarge the trip introduction text and header height */
+    div.trip h2 {
+        font-size: 175%;
+    }
+
+    p.trip_year {
         font-size: 150%;
     }
+
+    .trip_details {
+        padding: 125px 0;
+    }
+
+    /* Align text to center of neighboring photo */
+    .trip_card {
+        align-items: center;
+    }
+
+    .photo_info {
+        padding: 0 20px 0 30px;
+    }
+
 
 } /* Desktop & larger screens media query */
 
