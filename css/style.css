@@ -36,14 +36,17 @@ h4 {
 .skip {
     position: absolute;
     top: -40px;
-}
-
-.skip:focus {
-    top: 20px;
+    padding: 5px;
+    border-radius: 10px;
     text-decoration: none;
     color: white;
     font-weight: bold;
-    background-color: red;
+    background-color: black;
+}
+
+.skip:focus {
+    /* After the header */
+    top: 100px;
     left: 10px;
 }
 
@@ -198,19 +201,29 @@ li.nav_item:hover {
     background-color: rgb(176, 176, 176);
     background-blend-mode: multiply;
     /* Background image scrolls with page */
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     /* Large top/bottom padding so that background image shown */
     padding: 150px 30px;
     /* Add shadow so that text easier to read on background */
     text-shadow: 1px 1px 2px black;
 }
 
+.fav_intro_text {
+    background-color: darkslategray;
+    border: 5px white dashed;
+    width: 60%;
+    /* Center */
+    margin: 0 auto;
+}
+
 .fav_intro_block h1 {
     color: white;
+    padding: 10px 10px 0 10px;
 }
 
 .fav_intro_block h2 {
     font-weight: bold;
+    padding: 0 10px 10px 10px;
 }
 
 main.favorite {
@@ -266,7 +279,7 @@ main.favorite {
     padding: 40px;
 }
 
-.bluff_pic p, .puppy_pic p {
+.bluff_pic h3, .puppy_pic h3 {
     font-size: 150%;
     font-weight: bold;
     margin-bottom: 40px;
@@ -483,7 +496,7 @@ p.trip_year {
     }
 
     /* Bottom two separate section styling */
-    .bluff_pic p, .puppy_pic p {
+    .bluff_pic h3, .puppy_pic h3 {
         width: 75%;
         margin: 0 auto;
         /* Separate text and photo */
@@ -676,19 +689,21 @@ p.trip_year {
         padding: 100px;
     }
 
-    .puppy_pic p {
+    .puppy_pic h3, .bluff_pic h3 {
         font-size: 200%;
         text-align: left;
         padding-left: 50px;
     }
+    
+    .puppy_pic h3 {
+        padding-left: 50px;
+    }
 
     .bluff_pic p {
-        font-size: 200%;
-        text-align: right;
         padding-right: 50px;
     }
 
-    /* Where I've Beeen Styling */
+    /* Where I've Been Styling */
     /* Enlarge the introduction welcome text */
     .welcome_text p {
         font-size: 250%;
@@ -718,6 +733,12 @@ p.trip_year {
 
     .photo_info {
         padding: 0 20px 0 30px;
+    }
+
+    /* Prevent photos from growing very large -- 
+       Keep photos at a size that is contained within viewport */
+    .trip_card, .trip_photo img, .photo_info {
+        max-height: 600px;
     }
 
 
