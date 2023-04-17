@@ -110,6 +110,7 @@ li.nav_item a {
 li.nav_item.current_page a {
     font-weight: bold;
     opacity: 100%;
+    text-decoration: underline;
 }
 
 li.nav_item {
