@@ -314,6 +314,8 @@ main.favorite {
     font-weight: bolder;
     color: darkslategrey;
     text-align: left;
+    /* Remove default h2 margins */
+    margin: 0;
 }
 
 /* Welcome child 2 */
@@ -347,6 +349,7 @@ div.trip:nth-child(odd) h2 {
 div.trip h2 {
     /* Remove previous h2 margins */
     margin: 0;
+    padding: 0 10px;
     /* Change default h2 size */
     font-size: 140%;
     font-weight: bold;
@@ -745,6 +748,15 @@ footer {
 
     .photo_info {
         padding: 0 20px 0 30px;
+    }
+
+    /* Reverse order of every other trip */
+    .trip_card.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .photo_info.reverse {
+        text-align: right;
     }
 
     /* Prevent photos from growing very large -- 
