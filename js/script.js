@@ -23,7 +23,7 @@ tabletQuery.onchange = (e) => {
 }
 
 // Target mobile viewports at widths below 640px
-const mobileQuery = window.matchMedia("(max-width: 640px)");
+const mobileQuery = window.matchMedia("(max-width: 639px)");
 
 mobileQuery.onchange = (e) => {
     console.log("mobile")
