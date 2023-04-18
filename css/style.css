@@ -201,8 +201,6 @@ li.nav_item:hover {
     /* Darken background image so that text is readable */
     background-color: rgb(176, 176, 176);
     background-blend-mode: multiply;
-    /* Background image scrolls with page */
-    background-attachment: fixed;
     /* Large top/bottom padding so that background image shown */
     padding: 150px 30px;
     /* Add shadow so that text easier to read on background */
@@ -473,6 +471,8 @@ footer {
     .fav_intro_block {
         /* Even larger top/bottom padding so that background image shown */
         padding: 200px 75px;
+        /* Background image scrolls with the page */
+        background-attachment: fixed;
     }
     
     /* Bring top three images into a row */
