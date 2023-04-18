@@ -471,8 +471,6 @@ footer {
     .fav_intro_block {
         /* Even larger top/bottom padding so that background image shown */
         padding: 200px 75px;
-        /* Background image scrolls with the page */
-        background-attachment: fixed;
     }
     
     /* Bring top three images into a row */
