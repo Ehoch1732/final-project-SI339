@@ -36,7 +36,9 @@ mobileQuery.onchange = (e) => {
 
 function currentPage() {
     let currFile = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
-    if (currFile === "index.html") {
+    // When the page first loads on GitHub Pages, it does not have index.html at the end
+    // until you click "Introduction"
+    if (currFile === "index.html" || currFile === "") {
         let currPageInNav = document.getElementById("index");
         currPageInNav.classList.add("current_page");
         // Make sure other two pages do not have current_page class.
@@ -57,8 +59,6 @@ function currentPage() {
         document.getElementById("trips").classList.remove("current_page");
         document.getElementById("index").classList.remove("current_page");
     }
-
-
 }
 
 window.addEventListener("load", currentPage);
